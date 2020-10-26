@@ -23,10 +23,10 @@ if request.env.web2py_runtime_gae:
 else:
     is_gae = False
 
-if request.is_https:
+if 1==1:
     session.secure()
-elif request.env.trusted_lan_prefix and \
-     request.client.startswith(request.env.trusted_lan_prefix):
+#elif request.env.trusted_lan_prefix and \
+#     request.client.startswith(request.env.trusted_lan_prefix):
     request.is_local = True
 elif not request.is_local and not DEMO_MODE:
     raise HTTP(200, T('Admin is disabled because insecure channel'))
